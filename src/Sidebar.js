@@ -19,11 +19,11 @@ const MySidebar = () => {
                         <Button onClick={() => collapse(!collapsed)}>
                             <Hamburger />
                         </Button>
+                        <MenuItem component={<Link to="/" />}> Home </MenuItem>
                         <SubMenu label="Charts">
                             <MenuItem component={<Link to="/contact" />}> Contact </MenuItem>
                             <MenuItem> Line charts </MenuItem>
                         </SubMenu>
-                        <MenuItem component={<Link to="/" />}> Home </MenuItem>
                         <MenuItem component={<Link to="/blogs" />}> Blogs </MenuItem>
                         <MenuItem component={<Link to="/contact" />}> Contact </MenuItem>
                     </Menu>
