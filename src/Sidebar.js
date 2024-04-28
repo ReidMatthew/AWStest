@@ -4,13 +4,14 @@ import { BrowserRouter as Router, Route, Routes, Link, Switch } from "react-rout
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
-import Voronoi from "./pages/Voronoi";
-import { Menu as Hamburger, Circle, Home as House, SquareOutlined, Map } from '@mui/icons-material';
+import Voronoi from "./pages/VoronoiMap";
+import Gear from "./pages/GearPage";
+import { Menu as Hamburger, Circle, Home as House, SquareOutlined, Map, Settings } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import './Sidebar.css';
 
 const MySidebar = () => {
-    const [collapsed, collapse] = React.useState(false);
+    const [collapsed, collapse] = React.useState(true);
 
     return (
         <Router>
@@ -31,6 +32,7 @@ const MySidebar = () => {
                         <MenuItem component={<Link to="/blogs" />} icon={<SquareOutlined />}> Blogs </MenuItem>
                         <MenuItem component={<Link to="/contact" />} icon={<SquareOutlined />}> Contact </MenuItem>
                         <MenuItem component={<Link to="/voronoi" />} icon={<Map />}> Map </MenuItem>
+                        <MenuItem component={<Link to="/gear" />} icon={<Settings />}> Gear </MenuItem>
                     </Menu>
                 </Sidebar>
 
@@ -39,6 +41,7 @@ const MySidebar = () => {
                     <Route path="/blogs" element={<Blogs style={{ display: "flex" }} />} />
                     <Route path="/contact" element={<Contact style={{ display: "flex" }} />} />
                     <Route path="/voronoi" element={<Voronoi style={{ display: "flex" }} />} />
+                    <Route path="/gear" element={<Gear style={{ display: "flex" }} />} />
                 </Routes>
 
             </div>
